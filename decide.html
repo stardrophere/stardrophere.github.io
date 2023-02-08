@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://ts1.cn.mm.bing.net/th/id/R-C.456a5d2fa74aff5a9b8c9bce32dc785e?rik=c%2bFXUprFZCHnyg&riu=http%3a%2f%2fhanwen360.com%2fimg%2fshufa%2fks%2f1%2fb27fd6e5166895c7.png&ehk=qnIv%2bjR2DU14HxJx2Dit2oqTyJFxMV%2fJeoFo1vbVggw%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" type="image/x-icon">
+    <title>choose</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+        }
+        .container {
+            height: 100%;
+            background-image: linear-gradient(to right, #999999, #330867);
+        }
+        .login-wrapper {
+            background-color: bisque;
+            width: 358px;
+            height: 588px;
+            border-radius: 15px;
+            padding: 0 50px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .header {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border-bottom: 1px solid rgb(128,125,125);
+            font-size: 15px;
+            outline: none;
+        }
+        .input-item::placeholder {
+            text-transform: uppercase;
+        }
+        .btn {
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 40px;
+            background-image: linear-gradient(to right, #1013d5, #e724b0);
+            color: #fff;
+        }
+        .msg {
+            text-align: center;
+            line-height: 88px;
+        }
+        a {
+            text-decoration-line: none;
+            color: #abc1ee;
+        }
+    </style>
+</head>
+<body>
+<audio src="https://win-web-ri01-sycdn.kuwo.cn/2f1d044e5989658a6aa38f7f01fe3d99/63e36899/resource/n1/87/57/3082041059.mp3" id="beaut"></audio>
+<audio src="space.mp3" id="space"></audio>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="header">选择一个吧</div>
+            <div class="form-wrapper">
+
+
+                <button  type="button" class="btn" onclick="play1()">past</button>
+                <button  type="button" class="btn" onclick="play2()">now</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function play1() {
+        var player = document.getElementById('beaut');
+        player.src = 'https://win-web-ri01-sycdn.kuwo.cn/2f1d044e5989658a6aa38f7f01fe3d99/63e36899/resource/n1/87/57/3082041059.mp3';
+        player.play();
+        window.open('happybirthday.html');
+
+    }
+    function play2() {
+        var player = document.getElementById('space');
+        player.src = 'space.mp3';
+        player.play();
+        window.open('happy.html');
+    }
+</script>
+</html>

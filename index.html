@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://ts1.cn.mm.bing.net/th/id/R-C.456a5d2fa74aff5a9b8c9bce32dc785e?rik=c%2bFXUprFZCHnyg&riu=http%3a%2f%2fhanwen360.com%2fimg%2fshufa%2fks%2f1%2fb27fd6e5166895c7.png&ehk=qnIv%2bjR2DU14HxJx2Dit2oqTyJFxMV%2fJeoFo1vbVggw%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" type="image/x-icon">
+    <title>identity check</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+        }
+        .container {
+            height: 100%;
+            background-image: linear-gradient(to right, #999999, #330867);
+        }
+        .login-wrapper {
+            background-color: bisque;
+            width: 358px;
+            height: 588px;
+            border-radius: 15px;
+            padding: 0 50px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .header {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border-bottom: 1px solid rgb(128,125,125);
+            font-size: 15px;
+            outline: none;
+        }
+        .input-item::placeholder {
+            text-transform: uppercase;
+        }
+        .btn {
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 40px;
+            background-image: linear-gradient(to right, #1013d5, #e724b0);
+            color: #fff;
+        }
+        .msg {
+            text-align: center;
+            line-height: 88px;
+        }
+        a {
+            text-decoration-line: none;
+            color: #abc1ee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="header">身份验证</div>
+            <div class="form-wrapper">
+                <label for="name"></label><input id="name" type="text" name="username" placeholder="请输入您的名字" class="input-item">
+                <form action="{{ url_for('hello') }}" method="post">
+                    <button  type="button" class="btn" onclick="getuser()">check now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+		function getuser() {
+            const username = document.getElementById("name").value;
+            testing(username)
+		}
+
+		function testing(username) {
+			if (username === "") {
+				alert("请填写姓名");
+				return 0;
+			}
+			if (username!=="田家心") {
+				alert("不好意思,本网站仅为田小姐服务")
+				return 0;
+			}
+			else{
+				alert("欢迎！！！")
+                window.location.href=('decide.html')
+                return 1;
+			}
+		}
+	</script>
+</html>
+
+
+
